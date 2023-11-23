@@ -1,0 +1,41 @@
+
+:host {
+    display: block;
+    width: 100%;
+    max-width: 900px;
+    margin: 20px auto 150px auto;
+}
+table {
+    width: 100%;
+    tr:not(.cdk-header-row) {
+        cursor: pointer;
+        &:hover:not(.selected) {
+            background-color: #eee;
+        }
+        &.selected {
+            background-color: #ddd;
+        }
+    }
+}
+
+.player {
+    box-sizing: border-box;
+    height: 119px;
+    background-color: black;
+    padding: 30px;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: -100%;
+    z-index: 1;
+    border-top: 1px solid #ddd;
+    transition: bottom .4s;
+    &.open {
+        bottom: 0;
+    }
+    audio {
+        width: 100%;
+    }
+
+}
+
